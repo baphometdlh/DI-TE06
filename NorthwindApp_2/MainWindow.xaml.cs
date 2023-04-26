@@ -328,7 +328,8 @@ namespace NorthwindApp_2
 
         private void BotonFastReport_Click(object sender, RoutedEventArgs e)
         {
-
+            InformeEspecial unInforme = new InformeEspecial();
+            unInforme.Show();
         }
 
         #endregion

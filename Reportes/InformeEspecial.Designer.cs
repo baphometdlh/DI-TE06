@@ -1,6 +1,6 @@
 ﻿namespace Reportes
 {
-    partial class InformePedidos
+    partial class InformeEspecial
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CustomerReport1 = new Reportes.CustomerReport();
+            this.ProductsCaros1 = new Reportes.ProductsCaros();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,19 +40,18 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.CustomerReport1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(865, 600);
+            this.crystalReportViewer1.ReportSource = this.ProductsCaros1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(841, 595);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // InformePedidos
+            // InformeEspecial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 600);
+            this.ClientSize = new System.Drawing.Size(841, 595);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "InformePedidos";
-            this.Text = "Informe Pedidos";
+            this.Name = "InformeEspecial";
+            this.Text = "InformeEspecial";
             this.ResumeLayout(false);
 
         }
@@ -60,6 +59,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private CustomerReport CustomerReport1;
+        private ProductsCaros ProductsCaros1;
     }
 }

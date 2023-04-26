@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/26/2023 23:49:41" ReportInfo.Modified="04/26/2023 23:54:27" ReportInfo.CreatorVersion="2023.2.9.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqAFHGp6KQj27H4qUwAIR20hSnyrpNtgmeY+I5zyTmYE0HuZfX1hs9fAqnt4DRtzHmqfaS8XhRmuCgrQFjlapaRC+YMyYcCqzwYv4qgvErdBB/T1vEZZRibUiq4XuF31WopleAXXTti/rqXYbjFNx4QFMIn9O/ZhIxXEbjiMOAvGMo0UplqnyzH2DtqeMJ9HvtHLfc+hopauOfNgdKPlDitA==">
+      <TableDataSource Name="sysdiagrams" DataType="System.Int32" Enabled="true" TableName="sysdiagrams">
+        <Column Name="name" DataType="System.String"/>
+        <Column Name="principal_id" DataType="System.Int32"/>
+        <Column Name="diagram_id" DataType="System.Int32"/>
+        <Column Name="version" DataType="System.Int32"/>
+        <Column Name="definition" DataType="System.Byte[]" BindableControl="Picture"/>
+      </TableDataSource>
+      <TableDataSource Name="Employees" DataType="System.Int32" Enabled="true" TableName="Employees">
+        <Column Name="EmployeeID" DataType="System.Int32"/>
+        <Column Name="LastName" DataType="System.String"/>
+        <Column Name="FirstName" DataType="System.String"/>
+        <Column Name="Title" DataType="System.String"/>
+        <Column Name="TitleOfCourtesy" DataType="System.String"/>
+        <Column Name="BirthDate" DataType="System.DateTime"/>
+        <Column Name="HireDate" DataType="System.DateTime"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="Region" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+        <Column Name="HomePhone" DataType="System.String"/>
+        <Column Name="Extension" DataType="System.String"/>
+        <Column Name="Photo" DataType="System.Byte[]" BindableControl="Picture"/>
+        <Column Name="Notes" DataType="System.String"/>
+        <Column Name="ReportsTo" DataType="System.Int32"/>
+        <Column Name="PhotoPath" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Categories" DataType="System.Int32" Enabled="true" TableName="Categories">
+        <Column Name="CategoryID" DataType="System.Int32"/>
+        <Column Name="CategoryName" DataType="System.String"/>
+        <Column Name="Description" DataType="System.String"/>
+        <Column Name="Picture" DataType="System.Byte[]" BindableControl="Picture"/>
+      </TableDataSource>
+      <TableDataSource Name="Customers" DataType="System.Int32" Enabled="true" TableName="Customers">
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="ContactName" DataType="System.String"/>
+        <Column Name="ContactTitle" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="Region" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+        <Column Name="Phone" DataType="System.String"/>
+        <Column Name="Fax" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Shippers" DataType="System.Int32" Enabled="true" TableName="Shippers">
+        <Column Name="ShipperID" DataType="System.Int32"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="Phone" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Suppliers" DataType="System.Int32" Enabled="true" TableName="Suppliers">
+        <Column Name="SupplierID" DataType="System.Int32"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="ContactName" DataType="System.String"/>
+        <Column Name="ContactTitle" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="Region" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+        <Column Name="Phone" DataType="System.String"/>
+        <Column Name="Fax" DataType="System.String"/>
+        <Column Name="HomePage" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Orders" DataType="System.Int32" Enabled="true" TableName="Orders">
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="EmployeeID" DataType="System.Int32"/>
+        <Column Name="OrderDate" DataType="System.DateTime"/>
+        <Column Name="RequiredDate" DataType="System.DateTime"/>
+        <Column Name="ShippedDate" DataType="System.DateTime"/>
+        <Column Name="ShipVia" DataType="System.Int32"/>
+        <Column Name="Freight" DataType="System.Decimal"/>
+        <Column Name="ShipName" DataType="System.String"/>
+        <Column Name="ShipAddress" DataType="System.String"/>
+        <Column Name="ShipCity" DataType="System.String"/>
+        <Column Name="ShipRegion" DataType="System.String"/>
+        <Column Name="ShipPostalCode" DataType="System.String"/>
+        <Column Name="ShipCountry" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Products" DataType="System.Int32" Enabled="true" TableName="Products">
+        <Column Name="ProductID" DataType="System.Int32"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="SupplierID" DataType="System.Int32"/>
+        <Column Name="CategoryID" DataType="System.Int32"/>
+        <Column Name="QuantityPerUnit" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+        <Column Name="UnitsInStock" DataType="System.Int16"/>
+        <Column Name="UnitsOnOrder" DataType="System.Int16"/>
+        <Column Name="ReorderLevel" DataType="System.Int16"/>
+        <Column Name="Discontinued" DataType="System.Boolean" BindableControl="CheckBox"/>
+      </TableDataSource>
+      <TableDataSource Name="Order Details" DataType="System.Int32" Enabled="true" TableName="Order Details">
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="ProductID" DataType="System.Int32"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+        <Column Name="Quantity" DataType="System.Int16"/>
+        <Column Name="Discount" DataType="System.Single"/>
+      </TableDataSource>
+      <TableDataSource Name="CustomerCustomerDemo" DataType="System.Int32" Enabled="true" TableName="CustomerCustomerDemo">
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="CustomerTypeID" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="CustomerDemographics" DataType="System.Int32" Enabled="true" TableName="CustomerDemographics">
+        <Column Name="CustomerTypeID" DataType="System.String"/>
+        <Column Name="CustomerDesc" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Region" DataType="System.Int32" Enabled="true" TableName="Region">
+        <Column Name="RegionID" DataType="System.Int32"/>
+        <Column Name="RegionDescription" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Territories" DataType="System.Int32" Enabled="true" TableName="Territories">
+        <Column Name="TerritoryID" DataType="System.String"/>
+        <Column Name="TerritoryDescription" DataType="System.String"/>
+        <Column Name="RegionID" DataType="System.Int32"/>
+      </TableDataSource>
+      <TableDataSource Name="EmployeeTerritories" DataType="System.Int32" Enabled="true" TableName="EmployeeTerritories">
+        <Column Name="EmployeeID" DataType="System.Int32"/>
+        <Column Name="TerritoryID" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Customer and Suppliers by City" DataType="System.Int32" Enabled="true" TableName="Customer and Suppliers by City">
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="ContactName" DataType="System.String"/>
+        <Column Name="Relationship" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Alphabetical list of products" DataType="System.Int32" Enabled="true" TableName="Alphabetical list of products">
+        <Column Name="ProductID" DataType="System.Int32"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="SupplierID" DataType="System.Int32"/>
+        <Column Name="CategoryID" DataType="System.Int32"/>
+        <Column Name="QuantityPerUnit" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+        <Column Name="UnitsInStock" DataType="System.Int16"/>
+        <Column Name="UnitsOnOrder" DataType="System.Int16"/>
+        <Column Name="ReorderLevel" DataType="System.Int16"/>
+        <Column Name="Discontinued" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="CategoryName" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Current Product List" DataType="System.Int32" Enabled="true" TableName="Current Product List">
+        <Column Name="ProductID" DataType="System.Int32"/>
+        <Column Name="ProductName" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Orders Qry" DataType="System.Int32" Enabled="true" TableName="Orders Qry">
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="EmployeeID" DataType="System.Int32"/>
+        <Column Name="OrderDate" DataType="System.DateTime"/>
+        <Column Name="RequiredDate" DataType="System.DateTime"/>
+        <Column Name="ShippedDate" DataType="System.DateTime"/>
+        <Column Name="ShipVia" DataType="System.Int32"/>
+        <Column Name="Freight" DataType="System.Decimal"/>
+        <Column Name="ShipName" DataType="System.String"/>
+        <Column Name="ShipAddress" DataType="System.String"/>
+        <Column Name="ShipCity" DataType="System.String"/>
+        <Column Name="ShipRegion" DataType="System.String"/>
+        <Column Name="ShipPostalCode" DataType="System.String"/>
+        <Column Name="ShipCountry" DataType="System.String"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="Region" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Products Above Average Price" DataType="System.Int32" Enabled="true" TableName="Products Above Average Price">
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Products by Category" DataType="System.Int32" Enabled="true" TableName="Products by Category">
+        <Column Name="CategoryName" DataType="System.String"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="QuantityPerUnit" DataType="System.String"/>
+        <Column Name="UnitsInStock" DataType="System.Int16"/>
+        <Column Name="Discontinued" DataType="System.Boolean" BindableControl="CheckBox"/>
+      </TableDataSource>
+      <TableDataSource Name="Quarterly Orders" DataType="System.Int32" Enabled="true" TableName="Quarterly Orders">
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Invoices" DataType="System.Int32" Enabled="true" TableName="Invoices">
+        <Column Name="ShipName" DataType="System.String"/>
+        <Column Name="ShipAddress" DataType="System.String"/>
+        <Column Name="ShipCity" DataType="System.String"/>
+        <Column Name="ShipRegion" DataType="System.String"/>
+        <Column Name="ShipPostalCode" DataType="System.String"/>
+        <Column Name="ShipCountry" DataType="System.String"/>
+        <Column Name="CustomerID" DataType="System.String"/>
+        <Column Name="CustomerName" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="City" DataType="System.String"/>
+        <Column Name="Region" DataType="System.String"/>
+        <Column Name="PostalCode" DataType="System.String"/>
+        <Column Name="Country" DataType="System.String"/>
+        <Column Name="Salesperson" DataType="System.String"/>
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="OrderDate" DataType="System.DateTime"/>
+        <Column Name="RequiredDate" DataType="System.DateTime"/>
+        <Column Name="ShippedDate" DataType="System.DateTime"/>
+        <Column Name="ShipperName" DataType="System.String"/>
+        <Column Name="ProductID" DataType="System.Int32"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+        <Column Name="Quantity" DataType="System.Int16"/>
+        <Column Name="Discount" DataType="System.Single"/>
+        <Column Name="ExtendedPrice" DataType="System.Decimal"/>
+        <Column Name="Freight" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Order Details Extended" DataType="System.Int32" Enabled="true" TableName="Order Details Extended">
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="ProductID" DataType="System.Int32"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+        <Column Name="Quantity" DataType="System.Int16"/>
+        <Column Name="Discount" DataType="System.Single"/>
+        <Column Name="ExtendedPrice" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Order Subtotals" DataType="System.Int32" Enabled="true" TableName="Order Subtotals">
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="Subtotal" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Product Sales for 1997" DataType="System.Int32" Enabled="true" TableName="Product Sales for 1997">
+        <Column Name="CategoryName" DataType="System.String"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="ProductSales" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Category Sales for 1997" DataType="System.Int32" Enabled="true" TableName="Category Sales for 1997">
+        <Column Name="CategoryName" DataType="System.String"/>
+        <Column Name="CategorySales" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Sales by Category" DataType="System.Int32" Enabled="true" TableName="Sales by Category">
+        <Column Name="CategoryID" DataType="System.Int32"/>
+        <Column Name="CategoryName" DataType="System.String"/>
+        <Column Name="ProductName" DataType="System.String"/>
+        <Column Name="ProductSales" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Sales Totals by Amount" DataType="System.Int32" Enabled="true" TableName="Sales Totals by Amount">
+        <Column Name="SaleAmount" DataType="System.Decimal"/>
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="CompanyName" DataType="System.String"/>
+        <Column Name="ShippedDate" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Summary of Sales by Quarter" DataType="System.Int32" Enabled="true" TableName="Summary of Sales by Quarter">
+        <Column Name="ShippedDate" DataType="System.DateTime"/>
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="Subtotal" DataType="System.Decimal"/>
+      </TableDataSource>
+      <TableDataSource Name="Summary of Sales by Year" DataType="System.Int32" Enabled="true" TableName="Summary of Sales by Year">
+        <Column Name="ShippedDate" DataType="System.DateTime"/>
+        <Column Name="OrderID" DataType="System.Int32"/>
+        <Column Name="Subtotal" DataType="System.Decimal"/>
+      </TableDataSource>
+      <ProcedureDataSource Name="Ten Most Expensive Products" DataType="System.Int32" Enabled="true" TableName="Ten Most Expensive Products" SelectCommand="Ten Most Expensive Products">
+        <Column Name="TenMostExpensiveProducts" DataType="System.String"/>
+        <Column Name="UnitPrice" DataType="System.Decimal"/>
+      </ProcedureDataSource>
+    </MsSqlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="132.3"/>
+    <PageHeaderBand Name="PageHeader1" Top="136.3" Width="718.2" Height="18.9">
+      <TextObject Name="Text2" Left="151.2" Width="94.5" Height="18.9" Text="PRODUCTO" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text4" Left="406.35" Width="94.5" Height="18.9" Text="PRECIO UNITARIO" Font="Arial, 10pt, style=Bold"/>
+      <LineObject Name="Line1" Left="151.2" Top="18.9" Width="349.65"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="159.2" Width="718.2" Height="37.8" DataSource="Ten Most Expensive Products">
+      <TextObject Name="Text1" Left="151.2" Top="9.45" Width="94.5" Height="18.9" Text="[Ten Most Expensive Products.TenMostExpensiveProducts]" Font="Arial, 10pt"/>
+      <TextObject Name="Text3" Left="406.35" Top="9.45" Width="94.5" Height="18.9" Text="[Ten Most Expensive Products.UnitPrice]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="201" Width="718.2" Height="94.5"/>
+  </ReportPage>
+</Report>
