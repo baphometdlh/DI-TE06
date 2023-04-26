@@ -37,6 +37,7 @@
             <Label x:Name="labelEmpleado2" Content="Empleado" HorizontalAlignment="Left" Margin="31,32,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16" Foreground="White"/>
             <Button x:Name="ButtonInformeEmpleados" Content="GENERAR&#xD;&#xA;INFORME" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Height="40" Width="76" BorderBrush="White" Background="Black" Foreground="White" Click="ButtonInformeEmpleados_Click"/>
         </Grid>
+        <Button x:Name="BotonFastReport" Content="Reporte&#xD;&#xA;Alternativo" HorizontalAlignment="Left" Margin="861,27,0,0" VerticalAlignment="Top" Height="80" Width="150" FontFamily="Arial Black" Background="#FFDC1818" BorderBrush="Black" Foreground="White" Click="BotonFastReport_Click"/>
 
 
     </Grid>

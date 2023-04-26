@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.informCli1 = new Reportes.informCli();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,14 +39,9 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.informCli1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(865, 600);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            // 
-            // informCli1
-            // 
-            this.informCli1.InitReport += new System.EventHandler(this.informCli1_InitReport);
             // 
             // InformePedidos
             // 
@@ -64,6 +58,5 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private informCli informCli1;
     }
 }

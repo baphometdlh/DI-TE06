@@ -234,7 +234,8 @@ namespace NorthwindApp_2
         #region Boton para generar un informe de empleados
         private void ButtonInformeEmpleados_Click(object sender, RoutedEventArgs e)
         {
-
+            InformeEmpleados unInforme = new InformeEmpleados();
+            unInforme.Show();
         }
         #endregion
 
@@ -320,6 +321,15 @@ namespace NorthwindApp_2
 
 
         #endregion
+
+        #endregion
+
+        #region Boton FastReport
+
+        private void BotonFastReport_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         #endregion
 
