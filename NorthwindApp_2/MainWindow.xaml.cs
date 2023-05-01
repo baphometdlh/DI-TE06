@@ -334,5 +334,9 @@ namespace NorthwindApp_2
 
         #endregion
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
