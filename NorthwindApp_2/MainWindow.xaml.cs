@@ -338,5 +338,10 @@ namespace NorthwindApp_2
         {
 
         }
+
+        private void BotonManual_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
