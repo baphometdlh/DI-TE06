@@ -1,0 +1,11 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=NorthwindApp.chm
+Contents file=Contenido.hhc
+Display compile progress=No
+Index file=Indice.hhk
+Language=0xc0a Español (España, internacional)
+
+
+[INFOTYPES]
+
