@@ -334,14 +334,18 @@ namespace NorthwindApp_2
 
         #endregion
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        /*private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }
+        }*/
 
+        #region Botón para abrir el archivo del manual de usuario
         private void BotonManual_Click(object sender, RoutedEventArgs e)
         {
-
+            Help.ShowHelp(null, "file://C:\\GIT\\DI-TE06\\manual de usuario\\NorthwindApp.chm");
         }
+
+        #endregion
+
     }
 }
