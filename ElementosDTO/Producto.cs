@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementosDTO
 {
-    public class ProductoDTO
+    public class Producto
     {
     }
 }

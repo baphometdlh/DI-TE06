@@ -12,12 +12,12 @@ namespace NorthwindBLL
     public class GestionBLL
     {
         #region Atributos
-        private List<CustomerVO> paises;
-        private List<CustomerVO> ciudades;
-        private List<CustomerVO> clientes;
-        private List<CustomerVO> boton;
-        private List<EmpleadosVO> empleados;
-        private List<PedidosVO> pedidos;
+        private List<CustomerDTO> paises;
+        private List<CustomerDTO> ciudades;
+        private List<CustomerDTO> clientes;
+        private List<CustomerDTO> boton;
+        private List<EmpleadosDTO> empleados;
+        private List<PedidosDTO> pedidos;
         private SqlDataAdapter adaptadorPedidos;
         private ConsultasSQL unaConsulta;
         private string unpais;
@@ -32,20 +32,20 @@ namespace NorthwindBLL
         #region Propiedades
         public ConsultasSQL UnaConsulta { get => unaConsulta; set => unaConsulta = value; }
         public string Unpais { get => unpais; set => unpais = value; }
-        public List<CustomerVO> Ciudades { get => ciudades; set => ciudades = value; }
+        public List<CustomerDTO> Ciudades { get => ciudades; set => ciudades = value; }
         public string UnaCiudad { get => unaCiudad; set => unaCiudad = value; }
-        public List<CustomerVO> Boton { get => boton; set => boton = value; }
-        public List<EmpleadosVO> Empleados { get => empleados; set => empleados = value; }
-        public List<CustomerVO> Paises { get => paises; set => paises = value; }
-        public List<PedidosVO> Pedidos { get => pedidos; set => pedidos = value; }
+        public List<CustomerDTO> Boton { get => boton; set => boton = value; }
+        public List<EmpleadosDTO> Empleados { get => empleados; set => empleados = value; }
+        public List<CustomerDTO> Paises { get => paises; set => paises = value; }
+        public List<PedidosDTO> Pedidos { get => pedidos; set => pedidos = value; }
         public string UnCliente { get => unCliente; set => unCliente = value; }
-        public List<CustomerVO> Clientes { get => clientes; set => clientes = value; }
+        public List<CustomerDTO> Clientes { get => clientes; set => clientes = value; }
         public SqlDataAdapter AdaptadorPedidos { get => adaptadorPedidos; set => adaptadorPedidos = value; }
         #endregion
 
         #region Métodos para CLIENTES
         #region Método para obtener todas las ciudades
-        public List<CustomerVO> CiudadesBLL()
+        public List<CustomerDTO> CiudadesBLL()
         {
             unaConsulta = new ConsultasSQL();
             Ciudades = unaConsulta.ConsultaCiudades();
@@ -54,7 +54,7 @@ namespace NorthwindBLL
         #endregion
 
         #region Método para obtener todos los paises
-        public List<CustomerVO> PaisesBLL()
+        public List<CustomerDTO> PaisesBLL()
         {
             unaConsulta = new ConsultasSQL();
             Paises = unaConsulta.ConsultaPaises();
@@ -63,7 +63,7 @@ namespace NorthwindBLL
         #endregion
 
         #region método para obtener las ciudades de un país en concreto        
-        public List<CustomerVO> SeleccionPais(string unpais)
+        public List<CustomerDTO> SeleccionPais(string unpais)
         {
             unaConsulta = new ConsultasSQL();
             this.Unpais = unpais;
@@ -74,7 +74,7 @@ namespace NorthwindBLL
         #endregion
 
         #region método para pedir la lista de lo que se ha seleccionado clicando el boton        
-        public List<CustomerVO> BotonBLL(string pais, string ciudad)
+        public List<CustomerDTO> BotonBLL(string pais, string ciudad)
         {
 
             if (pais.Equals("TODOS LOS PAISES"))
@@ -104,7 +104,7 @@ namespace NorthwindBLL
         #endregion
 
         #region Método para obtener una lista con todos los cliente
-        public List<CustomerVO> ClienteBLL()
+        public List<CustomerDTO> ClienteBLL()
         {
             unaConsulta= new ConsultasSQL();
             Clientes = unaConsulta.ConsultaCliente();
@@ -116,7 +116,7 @@ namespace NorthwindBLL
 
         #region Métodos para EMPLEADOS
         #region Método para pedir la lista de todos los empleados
-        public List<EmpleadosVO> EmpeladosBLL()
+        public List<EmpleadosDTO> EmpeladosBLL()
         {
             unaConsulta = new ConsultasSQL();
             Empleados = unaConsulta.consultaEmpleados();
@@ -128,7 +128,7 @@ namespace NorthwindBLL
         #region Métodos para PEDIDOS
 
         #region Método para pedir info de pedidos de un cliente en concreto
-        public List<PedidosVO> PedidosBLL(string unCliente)
+        public List<PedidosDTO> PedidosBLL(string unCliente)
         {
             if(unCliente.Equals("TODOS LOS CLIENTES"))
             {
@@ -146,7 +146,7 @@ namespace NorthwindBLL
         #endregion
 
         #region Método para obtener las unidades y precio de pedidos de cliente
-        public List<PedidosVO> UnidadesCantidad(string cliente)
+        public List<PedidosDTO> UnidadesCantidad(string cliente)
         {
             if (cliente.Equals("TODOS LOS CLIENTES"))
             {
@@ -164,7 +164,7 @@ namespace NorthwindBLL
         #endregion
 
         #region Método para obtener los productos, el precio unirtario y la cantidad por pedido de un cliente
-        public List<PedidosVO> ProductosCliente(string cliente)
+        public List<PedidosDTO> ProductosCliente(string cliente)
         {
             if (cliente.Equals("TODOS LOS CLIENTES"))
             {

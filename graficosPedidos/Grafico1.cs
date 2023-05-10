@@ -21,7 +21,7 @@ namespace graficosPedidos
         }
 
         #region Método para insertar los datos en el gráfico
-        public void MostrarDatos(ObservableCollection<PedidosVO> tabla, ObservableCollection<PedidosVO> queso)
+        public void MostrarDatos(ObservableCollection<PedidosDTO> tabla, ObservableCollection<PedidosDTO> queso)
         {
             chartPedidos.DataSource= tabla;
             chartQueso.DataSource= queso;

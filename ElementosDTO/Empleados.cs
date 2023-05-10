@@ -9,28 +9,28 @@ using System.Threading.Tasks;
 
 namespace ElementosDTO
 {
-    public class EmpleadosDTO
+    public class Empleados
     {
         #region Atributos
-        private ObservableCollection<EmpleadosVO> empleadosBoton;
+        private ObservableCollection<EmpleadosDTO> empleadosBoton;
         #endregion
 
         #region Constructores
-        public EmpleadosDTO() { }
+        public Empleados() { }
         #endregion
 
         #region Propiedades
-        public ObservableCollection<EmpleadosVO> EmpleadosBoton { get => empleadosBoton; set => empleadosBoton = value; }
+        public ObservableCollection<EmpleadosDTO> EmpleadosBoton { get => empleadosBoton; set => empleadosBoton = value; }
         #endregion
 
         #region Métodos
         #region todos los empleados de la base de datos
-        public ObservableCollection<EmpleadosVO> BotonEmpleadosDTO()
+        public ObservableCollection<EmpleadosDTO> BotonEmpleadosDTO()
         {
-            List<EmpleadosVO> unaLista = new List<EmpleadosVO>();
+            List<EmpleadosDTO> unaLista = new List<EmpleadosDTO>();
             GestionBLL unaGestion = new GestionBLL();
             unaLista = unaGestion.EmpeladosBLL();
-            EmpleadosBoton = new ObservableCollection<EmpleadosVO>(unaLista);
+            EmpleadosBoton = new ObservableCollection<EmpleadosDTO>(unaLista);
 
             return EmpleadosBoton;
         }

@@ -25,9 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDatosDAL", "BaseDatosDA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindBLL", "NorthwindBLL\NorthwindBLL.csproj", "{69924A98-128E-415C-A4CD-42AF9D41D59F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementosDTO", "ElementosDTO\ElementosDTO.csproj", "{F1D16B47-4B6E-4333-8D3E-5452627585FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elementos", "ElementosDTO\Elementos.csproj", "{F1D16B47-4B6E-4333-8D3E-5452627585FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementosVO", "ElementosVO\ElementosVO.csproj", "{21C1DFC8-894A-4EF0-AD27-76A62A5C0C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementosDTO", "ElementosVO\ElementosDTO.csproj", "{21C1DFC8-894A-4EF0-AD27-76A62A5C0C90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reportes", "Reportes\Reportes.csproj", "{297C530E-D5B4-437F-8E1D-12D680E7B7D7}"
 EndProject

@@ -37,11 +37,11 @@ namespace NorthwindApp_2
         public List<string> listaPaises { get; set; }
         public List<string> listaClientes { get; set; }
         public ObservableCollection<string> listaCiudades { get; set; }
-        public ObservableCollection<CustomerVO> unBotonCliente { get; set; } 
-        public ObservableCollection<EmpleadosVO> unBotonEmpleado { get; set; }
-        public ObservableCollection<PedidosVO> unBotonPedido { get; set; }
-        public ObservableCollection<PedidosVO> unBotonGrafico { get; set; }
-        public ObservableCollection<PedidosVO> unBotonQueso { get; set; }
+        public ObservableCollection<CustomerDTO> unBotonCliente { get; set; } 
+        public ObservableCollection<EmpleadosDTO> unBotonEmpleado { get; set; }
+        public ObservableCollection<PedidosDTO> unBotonPedido { get; set; }
+        public ObservableCollection<PedidosDTO> unBotonGrafico { get; set; }
+        public ObservableCollection<PedidosDTO> unBotonQueso { get; set; }
         public string unPais { get; set; }
         #endregion
 
@@ -53,7 +53,7 @@ namespace NorthwindApp_2
             try
             {
                 listaPaises = new List<string>();
-                CustomerDTO unosPaises = new CustomerDTO();
+                Customer unosPaises = new Customer();
                 listaPaises = unosPaises.GestionPaises();
                 this.DataContext = this;
             }
@@ -68,7 +68,7 @@ namespace NorthwindApp_2
             try
             {
                 listaCiudades = new ObservableCollection<string>();
-                CustomerDTO todasCiudades = new CustomerDTO();
+                Customer todasCiudades = new Customer();
                 listaCiudades = todasCiudades.GestionCiudades();
                 this.DataContext = this;
             }
@@ -82,7 +82,7 @@ namespace NorthwindApp_2
             try
             {
                 listaClientes = new List<string>();
-                CustomerDTO unosClientes = new CustomerDTO();
+                Customer unosClientes = new Customer();
                 listaClientes = unosClientes.GestionClientes();
                 this.DataContext = this;
             }
@@ -103,7 +103,7 @@ namespace NorthwindApp_2
             {
                 this.unPais = ComboBoxPaises.SelectedItem.ToString();
 
-                CustomerDTO unaConsulta = new CustomerDTO();
+                Customer unaConsulta = new Customer();
                 if (ComboBoxPaises.SelectedItem.Equals("TODOS LOS PAISES"))
                 {
                     ComboBoxCiudad.SelectedIndex = -1;
@@ -132,8 +132,8 @@ namespace NorthwindApp_2
             {
                 string pais = ComboBoxPaises.SelectedItem.ToString();
                 string ciudad = ComboBoxCiudad.SelectedItem.ToString();
-                unBotonCliente = new ObservableCollection<CustomerVO>();
-                CustomerDTO unCustomer = new CustomerDTO();
+                unBotonCliente = new ObservableCollection<CustomerDTO>();
+                Customer unCustomer = new Customer();
                 unBotonCliente = unCustomer.BotonDTO(pais, ciudad);
                 DataGrid.ItemsSource = unBotonCliente;
                 DataGrid.Visibility = Visibility.Visible;
@@ -186,8 +186,8 @@ namespace NorthwindApp_2
                 GridPedidos.Visibility = Visibility.Hidden;
                 DataGrid.Visibility = Visibility.Hidden;
                 gridClientes.Visibility = Visibility.Hidden;
-                unBotonEmpleado = new ObservableCollection<EmpleadosVO>();
-                EmpleadosDTO unEmpleado = new EmpleadosDTO();
+                unBotonEmpleado = new ObservableCollection<EmpleadosDTO>();
+                Empleados unEmpleado = new Empleados();
                 unBotonEmpleado = unEmpleado.BotonEmpleadosDTO();
                 dataGridEmpleado.ItemsSource = unBotonEmpleado;
                 dataGridEmpleado.Visibility = Visibility.Visible;
@@ -204,8 +204,8 @@ namespace NorthwindApp_2
         #region Botón para mostrar una ficha de empleados
         private void botonFichaEmpleado_Click(object sender, RoutedEventArgs e)
         {
-            EmpleadosVO unEmpleado = new EmpleadosVO();
-            unEmpleado = (EmpleadosVO)dataGridEmpleado.SelectedItem;
+            EmpleadosDTO unEmpleado = new EmpleadosDTO();
+            unEmpleado = (EmpleadosDTO)dataGridEmpleado.SelectedItem;
             
             try
             {
@@ -269,8 +269,8 @@ namespace NorthwindApp_2
             try
             {
                 string cliente = comboxClientesPedidos.SelectedItem.ToString();
-                unBotonPedido = new ObservableCollection<PedidosVO>();
-                PedidosDTO unPedido= new PedidosDTO();
+                unBotonPedido = new ObservableCollection<PedidosDTO>();
+                Pedido unPedido= new Pedido();
                 unBotonPedido = unPedido.pedidosCliente(cliente);
                 dataGridEmpleado.ItemsSource = unBotonPedido;
                 dataGridEmpleado.Visibility = Visibility.Visible;
@@ -290,8 +290,8 @@ namespace NorthwindApp_2
             try
             {
                 string cliente = comboxClientesPedidos.SelectedItem.ToString();
-                PedidosDTO unPedido = new PedidosDTO();
-                PedidosDTO otroPedido = new PedidosDTO();
+                Pedido unPedido = new Pedido();
+                Pedido otroPedido = new Pedido();
                 unBotonGrafico = unPedido.UnidadesCantidad(cliente);
                 unBotonQueso = otroPedido.ProductosCliente(cliente);
 
@@ -334,10 +334,6 @@ namespace NorthwindApp_2
 
         #endregion
 
-        /*private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }*/
 
         #region Botón para abrir el archivo del manual de usuario
         private void BotonManual_Click(object sender, RoutedEventArgs e)

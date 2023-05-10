@@ -83,13 +83,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ElementosDTO\ElementosDTO.csproj">
+    <ProjectReference Include="..\ElementosDTO\Elementos.csproj">
       <Project>{f1d16b47-4b6e-4333-8d3e-5452627585ff}</Project>
-      <Name>ElementosDTO</Name>
+      <Name>Elementos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ElementosVO\ElementosVO.csproj">
+    <ProjectReference Include="..\ElementosVO\ElementosDTO.csproj">
       <Project>{21c1dfc8-894a-4ef0-ad27-76a62a5c0c90}</Project>
-      <Name>ElementosVO</Name>
+      <Name>ElementosDTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

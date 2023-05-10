@@ -42,16 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerDTO.cs" />
-    <Compile Include="EmpleadosDTO.cs" />
-    <Compile Include="PedidosDTO.cs" />
-    <Compile Include="ProductoDTO.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Empleados.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ElementosVO\ElementosVO.csproj">
+    <ProjectReference Include="..\ElementosVO\ElementosDTO.csproj">
       <Project>{21c1dfc8-894a-4ef0-ad27-76a62a5c0c90}</Project>
-      <Name>ElementosVO</Name>
+      <Name>ElementosDTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\NorthwindBLL\NorthwindBLL.csproj">
       <Project>{69924a98-128e-415c-a4cd-42af9d41d59f}</Project>

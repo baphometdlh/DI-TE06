@@ -56,7 +56,7 @@ namespace BaseDatosDAL
         #region Consultas para la tabla Customers
 
         #region Consulta para sacar la lista de clientes
-        public List<CustomerVO> ConsultaCliente()
+        public List<CustomerDTO> ConsultaCliente()
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -75,11 +75,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> clientes = new List<CustomerVO>();
+                List<CustomerDTO> clientes = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unCliente = new CustomerVO();
+                    CustomerDTO unCliente = new CustomerDTO();
                     unCliente.NombreEmpresa = dataReader.GetValue(0).ToString();
                     clientes.Add(unCliente);
                 }
@@ -101,7 +101,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region consulta para sacar la lista de paises
-        public List<CustomerVO> ConsultaPaises()
+        public List<CustomerDTO> ConsultaPaises()
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -120,11 +120,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> paises = new List<CustomerVO>();
+                List<CustomerDTO> paises = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unPais = new CustomerVO();
+                    CustomerDTO unPais = new CustomerDTO();
                     unPais.Pais = dataReader.GetValue(0).ToString();
                     paises.Add(unPais);
                 }
@@ -146,7 +146,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region consulta para sacar las ciudades de un pais elegido
-        public List<CustomerVO> CiudadesPais(string Seleccion)
+        public List<CustomerDTO> CiudadesPais(string Seleccion)
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -166,11 +166,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> ciudades = new List<CustomerVO>();
+                List<CustomerDTO> ciudades = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unaCiudad = new CustomerVO();
+                    CustomerDTO unaCiudad = new CustomerDTO();
                     unaCiudad.Ciudad = dataReader.GetValue(0).ToString();
                     ciudades.Add(unaCiudad);
                 }
@@ -191,7 +191,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region consulta para sacar la lista de todas las ciudades.
-        public List<CustomerVO> ConsultaCiudades()
+        public List<CustomerDTO> ConsultaCiudades()
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -210,11 +210,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> ciudades = new List<CustomerVO>();
+                List<CustomerDTO> ciudades = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unaCiudad = new CustomerVO();
+                    CustomerDTO unaCiudad = new CustomerDTO();
                     unaCiudad.Ciudad = dataReader.GetValue(0).ToString();
                     ciudades.Add(unaCiudad);
                 }
@@ -236,7 +236,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region consulta para sacar los clientes de una ciudad en concreto
-        public List<CustomerVO> ClientesCiudad(string Seleccion)
+        public List<CustomerDTO> ClientesCiudad(string Seleccion)
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -256,11 +256,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> clientes = new List<CustomerVO>();
+                List<CustomerDTO> clientes = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unCliente = new CustomerVO();
+                    CustomerDTO unCliente = new CustomerDTO();
                     unCliente.NombreEmpresa = dataReader.GetValue(0).ToString();
                     clientes.Add(unCliente);
                 }
@@ -281,7 +281,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region consulta para sacar los clientes de un pais en concreto
-        public List<CustomerVO> ClientesPais(string Seleccion)
+        public List<CustomerDTO> ClientesPais(string Seleccion)
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -301,11 +301,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> clientes = new List<CustomerVO>();
+                List<CustomerDTO> clientes = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unCliente = new CustomerVO();
+                    CustomerDTO unCliente = new CustomerDTO();
                     unCliente.NombreEmpresa = dataReader.GetValue(0).ToString();
                     clientes.Add(unCliente);
                 }
@@ -328,7 +328,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region Consulta para el botón Customers
-        public List<CustomerVO> ConsultaBoton(String pais, string ciudad)
+        public List<CustomerDTO> ConsultaBoton(String pais, string ciudad)
         {
 
             //conexion
@@ -349,11 +349,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<CustomerVO> clientes = new List<CustomerVO>();
+                List<CustomerDTO> clientes = new List<CustomerDTO>();
 
                 while (dataReader.Read())
                 {
-                    CustomerVO unCliente = new CustomerVO();
+                    CustomerDTO unCliente = new CustomerDTO();
                     unCliente.IDCliente= dataReader.GetValue(0).ToString();
                     unCliente.NombreEmpresa = dataReader.GetValue(1).ToString();
                     unCliente.NombreContacto = dataReader.GetValue(2).ToString();
@@ -388,7 +388,7 @@ namespace BaseDatosDAL
         #region CONSULTAS EMPLEADOS
 
         #region consulta para sacar la lista de todos los empleados
-        public List<EmpleadosVO> consultaEmpleados()
+        public List<EmpleadosDTO> consultaEmpleados()
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -408,11 +408,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<EmpleadosVO> empleados = new List<EmpleadosVO>();
+                List<EmpleadosDTO> empleados = new List<EmpleadosDTO>();
 
                 while (dataReader.Read())
                 {
-                    EmpleadosVO unEmpleado = new EmpleadosVO();
+                    EmpleadosDTO unEmpleado = new EmpleadosDTO();
                     unEmpleado.IDEmpleado = dataReader.GetValue(0).ToString();
                     unEmpleado.Apellido = dataReader.GetValue(1).ToString();
                     unEmpleado.Nombre = dataReader.GetValue(2).ToString();
@@ -447,7 +447,7 @@ namespace BaseDatosDAL
         #region CONSULTAS PEDIDOS
 
         #region Consulta para sacar información de los pedidos de un cliente en concreto
-        public List<PedidosVO> ConsultaPedidosCantidades(string cliente)
+        public List<PedidosDTO> ConsultaPedidosCantidades(string cliente)
         {
             //conexion
             SqlConnection conn = new SqlConnection(this.Ruta);
@@ -468,11 +468,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<PedidosVO> pedidos= new List<PedidosVO>();
+                List<PedidosDTO> pedidos= new List<PedidosDTO>();
 
                 while (dataReader.Read())
                 {
-                    PedidosVO unPedido= new PedidosVO();
+                    PedidosDTO unPedido= new PedidosDTO();
                     unPedido.OrderID= int.Parse(dataReader.GetValue(0).ToString());
                     unPedido.ClienteID= dataReader.GetValue(1).ToString();
                     unPedido.EmpleadoID= dataReader.GetValue(2).ToString();
@@ -504,7 +504,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region Consulta para sacar la cantidad y el precio de los pedidos de cliente
-        public List<PedidosVO> ConsultaCantidadPrecio(string cliente)
+        public List<PedidosDTO> ConsultaCantidadPrecio(string cliente)
         {
             SqlConnection conn = new SqlConnection(this.Ruta);
             
@@ -523,11 +523,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<PedidosVO> pedidos = new List<PedidosVO>();
+                List<PedidosDTO> pedidos = new List<PedidosDTO>();
 
                 while (dataReader.Read())
                 {
-                    PedidosVO unPedido = new PedidosVO();
+                    PedidosDTO unPedido = new PedidosDTO();
                     unPedido.PrecioUnitario= double.Parse(dataReader.GetValue(0).ToString());
                     unPedido.Cantidad= int.Parse(dataReader.GetValue(1).ToString());
 
@@ -551,7 +551,7 @@ namespace BaseDatosDAL
         #endregion
 
         #region Consulta para sacar los nombres, precio y unidades de productos en los pedidos de cliente
-        public List<PedidosVO> ConsultaProductosPedidos(string cliente)
+        public List<PedidosDTO> ConsultaProductosPedidos(string cliente)
         {
             SqlConnection conn = new SqlConnection(this.Ruta);
 
@@ -574,11 +574,11 @@ namespace BaseDatosDAL
                 command = new SqlCommand(sql, conn);
                 dataReader = command.ExecuteReader();
 
-                List<PedidosVO> pedidos = new List<PedidosVO>();
+                List<PedidosDTO> pedidos = new List<PedidosDTO>();
 
                 while (dataReader.Read())
                 {
-                    PedidosVO unPedido = new PedidosVO();
+                    PedidosDTO unPedido = new PedidosDTO();
                     unPedido.NombreProdcuto = dataReader.GetValue(0).ToString();
                     unPedido.PrecioUnitario = double.Parse(dataReader.GetValue(1).ToString());
                     unPedido.Cantidad = int.Parse(dataReader.GetValue(2).ToString());

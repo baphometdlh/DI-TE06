@@ -23,9 +23,9 @@ namespace FichaEmpleados
 
         }
 
-        public void UnEmpleado(EmpleadosVO unEmpleado)
+        public void UnEmpleado(EmpleadosDTO unEmpleado)
         {
-            EmpleadosVO elEmpleado = unEmpleado;
+            EmpleadosDTO elEmpleado = unEmpleado;
             try
             {
                 textBoxTelefono.AppendText(elEmpleado.Telefono.ToString());

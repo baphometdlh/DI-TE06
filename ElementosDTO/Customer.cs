@@ -9,7 +9,7 @@ using System.Collections.ObjectModel;
 
 namespace ElementosDTO
 {
-    public class CustomerDTO
+    public class Customer
     {
 
         #region Atributos
@@ -17,15 +17,15 @@ namespace ElementosDTO
         private List<string> paises;
         private List<string> clientes;
         private ObservableCollection<string> ciudades;
-        private ObservableCollection<CustomerVO> clientesBoton;
-        private ObservableCollection<EmpleadosDTO> empleadosBoton;
+        private ObservableCollection<CustomerDTO> clientesBoton;
+        private ObservableCollection<Empleados> empleadosBoton;
         private string pais;
         private string ciudad;
 
         #endregion
 
         #region Constructor
-        public CustomerDTO() { }
+        public Customer() { }
 
         #endregion
 
@@ -35,8 +35,8 @@ namespace ElementosDTO
         public ObservableCollection<string> Ciudades { get => ciudades; set => ciudades = value; }
         public string Pais { get => pais; set => pais = value; }
         public string Ciudad { get => ciudad; set => ciudad = value; }
-        public ObservableCollection<CustomerVO> ClientesBoton { get => clientesBoton; set => clientesBoton = value; }
-        internal ObservableCollection<EmpleadosDTO> EmpleadosBoton { get => empleadosBoton; set => empleadosBoton = value; }
+        public ObservableCollection<CustomerDTO> ClientesBoton { get => clientesBoton; set => clientesBoton = value; }
+        internal ObservableCollection<Empleados> EmpleadosBoton { get => empleadosBoton; set => empleadosBoton = value; }
         public List<string> Clientes { get => clientes; set => clientes = value; }
         #endregion
 
@@ -46,7 +46,7 @@ namespace ElementosDTO
         public List<string> GestionPaises()
         {
             paises = new List<string>();
-            List<CustomerVO> unaLista = new List<CustomerVO>();
+            List<CustomerDTO> unaLista = new List<CustomerDTO>();
             unaGestion = new GestionBLL();
             unaLista = unaGestion.PaisesBLL();
             paises.Add("TODOS LOS PAISES");
@@ -62,7 +62,7 @@ namespace ElementosDTO
         public ObservableCollection<string> GestionCiudades()
         {
             ciudades = new ObservableCollection<string>();
-            List<CustomerVO> unaLista = new List<CustomerVO>();
+            List<CustomerDTO> unaLista = new List<CustomerDTO>();
             unaGestion = new GestionBLL();
             unaLista = unaGestion.CiudadesBLL();
             ciudades.Add("TODAS LAS CIUDADES");
@@ -78,7 +78,7 @@ namespace ElementosDTO
         public List<string> GestionClientes()
         {
             Clientes= new List<string>();
-            List<CustomerVO> unaLista = new List<CustomerVO>();
+            List<CustomerDTO> unaLista = new List<CustomerDTO>();
             unaGestion= new GestionBLL();
             unaLista = unaGestion.ClienteBLL();
             Clientes.Add("TODOS LOS CLIENTES");
@@ -95,7 +95,7 @@ namespace ElementosDTO
         {
             string eleccion = pais;
             Ciudades = new ObservableCollection<string>();
-            List<CustomerVO> unaLista = new List<CustomerVO>();
+            List<CustomerDTO> unaLista = new List<CustomerDTO>();
             unaGestion = new GestionBLL();
             unaLista = unaGestion.SeleccionPais(eleccion);
             Ciudades.Add("TODAS LAS CIUDADES");
@@ -112,15 +112,15 @@ namespace ElementosDTO
         #endregion
 
         #region Boton customers
-        public ObservableCollection<CustomerVO> BotonDTO(string pais, string ciudad)
+        public ObservableCollection<CustomerDTO> BotonDTO(string pais, string ciudad)
         {
             this.pais = pais;
             this.Ciudad = ciudad;
             
-            List<CustomerVO> unaLista = new List<CustomerVO>();
+            List<CustomerDTO> unaLista = new List<CustomerDTO>();
             unaGestion = new GestionBLL();
             unaLista = unaGestion.BotonBLL(Pais, Ciudad);
-            ClientesBoton = new ObservableCollection<CustomerVO>(unaLista);
+            ClientesBoton = new ObservableCollection<CustomerDTO>(unaLista);
 
             return ClientesBoton;
 

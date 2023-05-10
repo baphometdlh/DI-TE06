@@ -50,9 +50,9 @@
       <Project>{84b3407b-4ca1-4b70-94b7-4145e9d7da9d}</Project>
       <Name>BaseDatosDAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ElementosVO\ElementosVO.csproj">
+    <ProjectReference Include="..\ElementosVO\ElementosDTO.csproj">
       <Project>{21C1DFC8-894A-4EF0-AD27-76A62A5C0C90}</Project>
-      <Name>ElementosVO</Name>
+      <Name>ElementosDTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

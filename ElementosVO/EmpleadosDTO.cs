@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementosVO
 {
-    public class EmpleadosVO
+    public class EmpleadosDTO
     {
 
         #region Atributos
@@ -24,7 +24,7 @@ namespace ElementosVO
         #endregion
 
         #region Constructor
-        public EmpleadosVO() { }
+        public EmpleadosDTO() { }
         #endregion
 
         #region Propiedades

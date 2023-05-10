@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElementosVO
 {
-    public class PedidosVO
+    public class PedidosDTO
     {
         #region Atributos
         private int orderID;
@@ -23,7 +23,7 @@ namespace ElementosVO
         #endregion
 
         #region Constructor
-        public PedidosVO() { }
+        public PedidosDTO() { }
 
         #endregion
 
